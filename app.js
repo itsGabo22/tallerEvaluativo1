@@ -134,5 +134,7 @@ function renderCards() {
     container.innerHTML += cardHTML;
   });
 }
-
+window.onload = function() {
+  renderCards(); 
+};
 
