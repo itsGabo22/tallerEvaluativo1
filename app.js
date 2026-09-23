@@ -104,28 +104,21 @@ function renderCards() {
             ${project.svgIcon}
           </div>
 
-          <!-- Info del proyecto -->
           <h3 class="font-bold text-gray-800 text-base mb-1 tracking-tight">${project.title}</h3>
           <p class="text-[11px] text-gray-400 font-medium flex items-center gap-1 mb-2">
             <span class="ml-1">${project.team}</span>
           </p>
           
-          <!-- Tiempo restante -->
           <p class="text-[11px] font-semibold text-gray-400 flex items-center gap-1 mb-6">
             <span class="ml-1">${project.timeLeft}</span>
           </p>
         </div>
-
-        <!-- Sección inferior: Equipo y Progreso -->
         <div class="border-t border-gray-50 pt-4">
           <div class="flex items-center justify-between">
-            <!-- Avatares locales -->
             <div>
               <p class="text-[9px] text-gray-400 font-bold mb-1">Team Member</p>
               ${placeholderAvatars}
             </div>
-
-            <!-- Progreso -->
             <div class="text-right">
               <p class="text-[9px] text-gray-400 font-bold mb-0.5">Progress</p>
               <span class="text-xs font-black text-gray-700">${project.progress}%</span>

@@ -10,10 +10,9 @@
 </head>
 <body class="bg-[#F4F6FA] text-gray-700 font-sans antialiased min-h-screen flex">
 
-  <!-- BARRA LATERAL -->
   <aside class="w-64 bg-white border-r border-gray-100 flex flex-col justify-between py-6 pl-6 pr-4 hidden md:flex shrink-0">
     <div>
-      <!-- Logo -->
+
       <div class="flex items-center gap-3 mb-10 pl-2">
         <div class="w-8 h-8 rounded-full bg-[#00BCD4] flex items-center justify-center text-white">
           <i class="fa-solid fa-circle-nodes text-sm"></i>
@@ -21,7 +20,6 @@
         <span class="font-bold text-xl text-gray-800 tracking-tight">Boardto</span>
       </div>
 
-      <!-- Menú de Navegación -->
       <nav class="space-y-2">
         <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:text-gray-600 rounded-xl transition-colors font-medium">
           <i class="fa-solid fa-table-cells-large w-5"></i> Boards
@@ -50,7 +48,6 @@
       </nav>
     </div>
 
-    <!-- Botón Cerrar Sesión -->
     <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:text-red-500 rounded-xl transition-colors font-medium">
       <i class="fa-solid fa-arrow-right-from-bracket w-5"></i> Logout
     </a>
@@ -58,17 +55,13 @@
 
   <div class="flex-1 flex flex-col h-screen overflow-hidden">
     
-    <!--HEADER-->
     <header class="h-20 bg-white md:bg-transparent flex items-center justify-between px-8 shrink-0">
-      <!-- Buscador -->
       <div class="relative w-72">
         <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
           <i class="fa-solid fa-magnifying-glass"></i>
         </span>
         <input type="text" placeholder="Search..." class="w-full bg-transparent border-0 pl-10 pr-4 py-2 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-0">
       </div>
-
-      <!-- Usuario y Notificaciones -->
       <div class="flex items-center gap-6">
         <button class="relative text-gray-400 hover:text-gray-600">
           <i class="fa-regular fa-bell text-xl"></i>
@@ -79,17 +72,12 @@
             <p class="text-sm font-bold text-gray-800 leading-none">Augusta Ryan</p>
             <span class="text-xs text-gray-400">Director</span>
           </div>
-          <img src="https://unsplash.com" alt="Avatar" class="w-10 h-10 rounded-full object-cover border border-gray-200">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.oVxhGifM3-upr71B_eWD0gHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Avatar" class="w-10 h-10 rounded-full object-cover border border-gray-200">
         </div>
       </div>
     </header>
-
-    <!-- DASHBOARD-->
     <main class="flex-1 overflow-y-auto px-8 pb-12">
-      <!-- Fondo Blanco Contenedor Curvo -->
       <div class="bg-white rounded-3xl p-8 min-h-full border border-gray-50 shadow-sm">
-        
-        <!-- Título y Botón Agregar -->
         <div class="flex justify-between items-start mb-6">
           <div>
             <h1 class="text-2xl font-bold text-gray-800 mb-1">Reporting</h1>
@@ -99,35 +87,25 @@
             <i class="fa-solid fa-plus text-lg"></i>
           </button>
         </div>
-
-        <!-- Barra de Filtros y Vistas -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 border-b border-gray-50 pb-4">
-          <!-- Filtros de Estado -->
           <div class="flex flex-wrap gap-2 text-sm font-medium">
             <button class="px-4 py-1.5 text-gray-400 hover:text-gray-600">All</button>
             <button class="px-3 py-1.5 bg-cyan-50 text-[#00BCD4] rounded-lg flex items-center gap-2">Started <span class="bg-white px-1.5 py-0.5 rounded text-xs font-bold shadow-sm">32</span></button>
             <button class="px-3 py-1.5 text-gray-400 hover:bg-gray-50 rounded-lg flex items-center gap-2">Approval <span class="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-bold text-gray-500">20</span></button>
             <button class="px-3 py-1.5 text-gray-400 hover:bg-gray-50 rounded-lg flex items-center gap-2">Completed <span class="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-bold text-gray-500">14</span></button>
           </div>
-
-          <!-- Opciones de Vista -->
           <div class="flex items-center gap-2 self-end sm:self-auto">
             <button class="px-3 py-1.5 text-xs font-semibold border border-gray-100 rounded-lg text-gray-500 flex items-center gap-1.5 hover:bg-gray-50"><i class="fa-solid fa-sliders"></i> More</button>
             <button class="w-8 h-8 flex items-center justify-center border border-gray-100 rounded-lg text-gray-400 hover:bg-gray-50"><i class="fa-solid fa-list-check text-sm"></i></button>
             <button class="w-8 h-8 flex items-center justify-center bg-cyan-50 border border-cyan-100 rounded-lg text-[#00BCD4]"><i class="fa-solid fa-table-cells-large text-sm"></i></button>
           </div>
         </div>
-
-        <!-- CONTENEDOR DE TARJETAS-->
         <div id="cards-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Las tarjetas dinámicas aparecerán aquí (las del app.js) -->
         </div>
 
       </div>
     </main>
   </div>
-
-  <!-- Script de la aplicación -->
   <script src="app.js"></script>
 </body>
 </html>
