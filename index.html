@@ -1,87 +1,137 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Taller Evaluativo</title>
-<!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">TEAM</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boardto -  taller evaluativo</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body class="bg-[#F4F6FA] text-gray-700 font-sans antialiased min-h-screen flex">
+
+  <!-- BARRA LATERAL -->
+  <aside class="w-64 bg-white border-r border-gray-100 flex flex-col justify-between py-6 pl-6 pr-4 hidden md:flex shrink-0">
+    <div>
+      <!-- Logo -->
+      <div class="flex items-center gap-3 mb-10 pl-2">
+        <div class="w-8 h-8 rounded-full bg-[#00BCD4] flex items-center justify-center text-white">
+          <i class="fa-solid fa-circle-nodes text-sm"></i>
+        </div>
+        <span class="font-bold text-xl text-gray-800 tracking-tight">Boardto</span>
+      </div>
+
+      <!-- Menú de Navegación -->
+      <nav class="space-y-2">
+        <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:text-gray-600 rounded-xl transition-colors font-medium">
+          <i class="fa-solid fa-table-cells-large w-5"></i> Boards
+        </a>
+        <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:text-gray-600 rounded-xl transition-colors font-medium">
+          <i class="fa-regular fa-calendar-check w-5"></i> Plan Schedule
+        </a>
+        <a href="#" class="flex items-center gap-4 px-4 py-3 bg-[#00BCD4] text-white rounded-l-xl rounded-r-none font-medium shadow-md shadow-cyan-100 -mr-4 relative">
+          <i class="fa-solid fa-chart-pie w-5"></i> Reporting
+        </a>
+        <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:text-gray-600 rounded-xl transition-colors font-medium">
+          <i class="fa-regular fa-comment-dots w-5"></i> Messages
+        </a>
+        <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:text-gray-600 rounded-xl transition-colors font-medium">
+          <i class="fa-solid fa-users w-5"></i> Team Member
+        </a>
+        <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:text-gray-600 rounded-xl transition-colors font-medium">
+          <i class="fa-solid fa-puzzle-piece w-5"></i> Tools Plugin
+        </a>
+        <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:text-gray-600 rounded-xl transition-colors font-medium">
+          <i class="fa-solid fa-map-location-dot w-5"></i> Roadmap
+        </a>
+        <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:text-gray-600 rounded-xl transition-colors font-medium">
+          <i class="fa-solid fa-sliders w-5"></i> Setting
+        </a>
+      </nav>
     </div>
+
+    <!-- Botón Cerrar Sesión -->
+    <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:text-red-500 rounded-xl transition-colors font-medium">
+      <i class="fa-solid fa-arrow-right-from-bracket w-5"></i> Logout
+    </a>
+  </aside>
+
+  
+  <div class="flex-1 flex flex-col h-screen overflow-hidden">
+    
+    <!--HEADER-->
+    <header class="h-20 bg-white md:bg-transparent flex items-center justify-between px-8 shrink-0">
+      <!-- Buscador -->
+      <div class="relative w-72">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <input type="text" placeholder="Search..." class="w-full bg-transparent border-0 pl-10 pr-4 py-2 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-0">
+      </div>
+
+      <!-- Usuario y Notificaciones -->
+      <div class="flex items-center gap-6">
+        <button class="relative text-gray-400 hover:text-gray-600">
+          <i class="fa-regular fa-bell text-xl"></i>
+          <span class="absolute top-0 right-0 w-2 h-2 bg-orange-500 rounded-full border border-white"></span>
+        </button>
+        <div class="flex items-center gap-3">
+          <div class="text-right hidden sm:block">
+            <p class="text-sm font-bold text-gray-800 leading-none">Augusta Ryan</p>
+            <span class="text-xs text-gray-400">Director</span>
+          </div>
+          <img src="https://unsplash.com" alt="Avatar" class="w-10 h-10 rounded-full object-cover border border-gray-200">
+        </div>
+      </div>
+    </header>
+
+    <!-- DASHBOARD-->
+    <main class="flex-1 overflow-y-auto px-8 pb-12">
+      <!-- Fondo Blanco Contenedor Curvo -->
+      <div class="bg-white rounded-3xl p-8 min-h-full border border-gray-50 shadow-sm">
+        
+        <!-- Título y Botón Agregar -->
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-800 mb-1">Reporting</h1>
+            <p class="text-xs text-gray-400">All project in current month</p>
+          </div>
+          <button class="w-10 h-10 bg-[#00BCD4] text-white rounded-xl flex items-center justify-center shadow-lg shadow-cyan-100 hover:bg-cyan-600 transition-colors">
+            <i class="fa-solid fa-plus text-lg"></i>
+          </button>
+        </div>
+
+        <!-- Barra de Filtros y Vistas -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 border-b border-gray-50 pb-4">
+          <!-- Filtros de Estado -->
+          <div class="flex flex-wrap gap-2 text-sm font-medium">
+            <button class="px-4 py-1.5 text-gray-400 hover:text-gray-600">All</button>
+            <button class="px-3 py-1.5 bg-cyan-50 text-[#00BCD4] rounded-lg flex items-center gap-2">Started <span class="bg-white px-1.5 py-0.5 rounded text-xs font-bold shadow-xs">32</span></button>
+            <button class="px-3 py-1.5 text-gray-400 hover:bg-gray-50 rounded-lg flex items-center gap-2">Approval <span class="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-bold text-gray-500">20</span></button>
+            <button class="px-3 py-1.5 text-gray-400 hover:bg-gray-50 rounded-lg flex items-center gap-2">Completed <span class="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-bold text-gray-500">14</span></button>
+          </div>
+
+          <!-- Opciones de Vista -->
+          <div class="flex items-center gap-2 self-end sm:self-auto">
+            <button class="px-3 py-1.5 text-xs font-semibold border border-gray-100 rounded-lg text-gray-500 flex items-center gap-1.5 hover:bg-gray-50"><i class="fa-solid fa-sliders"></i> More</button>
+            <button class="w-8 h-8 flex items-center justify-center border border-gray-100 rounded-lg text-gray-400 hover:bg-gray-50"><i class="fa-solid fa-list-check text-sm"></i></button>
+            <button class="w-8 h-8 flex items-center justify-center bg-cyan-50 border border-cyan-100 rounded-lg text-[#00BCD4]"><i class="fa-solid fa-table-cells-large text-sm"></i></button>
+          </div>
+        </div>
+
+        <!-- CONTENEDOR DE TARJETAS-->
+        <div id="cards-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Las tarjetas dinámicas aparecerán aquí (las del archivo app.js) -->
+        </div>
+
+      </div>
+    </main>
   </div>
-</nav>
-    <h1>Fremeworks Backend tyscript</h1>
-    <div class="container text-center">
-  <div class="row">
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-  <img src="https://placehold.co/286x180" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-  <img src="https://placehold.co/286x180" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-  <img src="https://placehold.co/286x180" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-  </body>
+
+  <!-- Script de la aplicación -->
+  <script src="app.js"></script>
+</body>
 </html>
+
+
